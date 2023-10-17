@@ -1,0 +1,524 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    /* padding: 0; */
+    /* background-color: #2D2D2D; */
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+header.navbar-container {
+    max-width: 1920px;
+    width: 100%;
+    background-color: #2d2d2d;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    z-index: 999;
+}
+
+header.navbar-container .nav-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header.navbar-container .nav-list .logo {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    /* margin: auto; */
+}
+
+header.navbar-container .nav-list .logo img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #F17D33;
+    color: white;
+}
+
+.menu-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-around;
+    position: relative;
+    /* margin: auto; */
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #F17D33;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* beranda */
+
+main .beranda {
+    /* max-width: 1920px; */
+    width: 100%;
+    height: 1000px;
+    /* margin: auto; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: #F17D33; */
+    padding: 8rem;
+    display: flex;
+}
+
+main .beranda .content-description {
+    flex: 1 1;
+    font-size: larger;
+    padding: 1rem;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+main .beranda .content-description p {
+    margin-block: .5rem;
+}
+
+main .beranda .content-image {
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+    /* width: 800px; */
+    padding: 2rem;
+}
+
+main .beranda .content-image img {
+    margin: auto;
+    /* min-width: 200px; */
+    width: 100%;
+}
+
+/* about */
+.about {
+    background-color: #F17D33;
+    min-height: 1000px;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.about .container .judul {
+    padding: 1rem;
+}
+
+.about .gambar {
+    flex: 1;
+    min-width: 150px;
+    /* max-width: 500px; */
+    /* max-height: 900px; */
+    align-items: center;
+    text-align: center;
+}
+
+.about .gambar img {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .container {
+    flex: 1;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* min-width: 200px; */
+}
+
+.about .container .isi {
+    /* margin-block: .5rem; */
+}
+
+.about .container .isi h2 {
+    padding: 0;
+}
+
+.about .container .judul {
+    /* font-size: 3rem; */
+}
+
+/* layanan */
+
+main .layanan {
+    min-height: 1000px;
+    background-color: #2D2D2D;
+    width: 100%;
+    padding: 2rem 0;
+    /* height: 1000px; */
+    align-items: center;
+    flex-direction: column;
+    /* margin: 0; */
+    display: flex;
+}
+
+main .layanan .judul-layanan {
+    color: white;
+    /* font-size: 3rem; */
+    padding: 2rem;
+}
+
+main .fitur {
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    /* padding: 5rem 0; */
+}
+
+.fitur .judul {
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* border: 3px solid #2D2D2D; */
+    border-radius: 10px;
+    width: 400px;
+    min-height: 500px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    /* padding: 1rem; */
+}
+
+main .fitur img {
+    /* border-color: #2D2D2D; */
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+main .fitur p {
+    padding: 20px;
+}
+
+/* kontak */
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #F17D33;
+    /* min-width: 300px; */
+    /* min-height: 900px; */
+}
+
+.contact h2 {
+    width: 100%;
+    font-size: 3rem;
+    padding: 5rem;
+    margin: auto;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 600px; */
+    max-width: 800px;
+    width: 100%;
+    padding: 0 3rem 5rem;
+    border-radius: 10px;
+}
+
+.contact input {
+    width: 100%;
+    height: 60px;
+    padding: .5rem;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+}
+
+.contact .submit {
+    background-color: #2D2D2D;
+    border: 1px solid #2D2D2D;
+    color: white;
+    padding: 1rem 0;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+}
+
+label {
+    padding: .5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.contact textarea {
+    margin: 1rem 0;
+    width: 100%;
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.contact .elemen {
+    padding: .3rem 0;
+}
+
+
+/* aside */
+
+
+aside {
+    /* flex: 1; */
+    /* display: flex; */
+    width: 100%;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #2D2D2D;
+}
+
+.profil img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.profil .nama {
+    padding: 1rem;
+    text-align: center;
+    align-self: center;
+}
+
+.profil .detail {
+    text-align: left;
+    padding: 1rem;
+}
+
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #F17D33;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    main.beranda {
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 75%;
+    }
+
+    .menu-container {
+        display: flex;
+    }
+
+    header.navbar-container .nav-list {
+        width: 75%;
+        justify-content: space-between;
+    }
+
+    header.navbar-container .nav-list ul {
+        display: none;
+    }
+
+    header.navbar-container .nav-list .logo img {
+        width: 100%;
+    }
+
+    main .beranda {
+        height: 700px;
+        /* flex-direction: column; */
+        padding: 6rem;
+    }
+
+    .about {
+        min-height: 700px;
+    }
+
+    .contact form {
+        width: 80%;
+    }
+
+    .contact input {
+        height: 50px;
+        padding: .2;
+    }
+
+    .contact textarea {
+        height: 100px;
+    }
+
+    .card {
+        width: 80%;
+        min-height: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header.navbar-container .nav-list {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header.navbar-container .nav-list ul {
+        display: none;
+    }
+
+    main .beranda {
+        height: 75%;
+        flex-direction: column;
+        padding: 4rem;
+    }
+
+    .beranda .content-image {
+        padding: 0px;
+    }
+
+    .beranda .content-description {
+        margin: auto;
+    }
+
+    .about .container {
+        padding: 3rem;
+    }
+}
