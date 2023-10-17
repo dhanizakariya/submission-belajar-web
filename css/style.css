@@ -10,10 +10,7 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    /* padding: 0; */
-    /* background-color: #2D2D2D; */
-    /* display: flex; */
-    /* flex-direction: column; */
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -56,8 +53,6 @@ header.navbar-container .nav-list .logo {
     width: 150px;
     align-items: center;
     justify-content: center;
-    /* text-align: center; */
-    /* margin: auto; */
 }
 
 header.navbar-container .nav-list .logo img {
@@ -99,13 +94,11 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .menu-toggle {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     height: 28px;
     justify-content: space-around;
     position: relative;
-    /* margin: auto; */
 }
 
 .menu-toggle input {
@@ -158,13 +151,10 @@ main {
 /* beranda */
 
 main .beranda {
-    /* max-width: 1920px; */
     width: 100%;
     height: 1000px;
-    /* margin: auto; */
     align-items: center;
     justify-content: center;
-    /* background-color: #F17D33; */
     padding: 8rem;
     display: flex;
 }
@@ -173,7 +163,6 @@ main .beranda .content-description {
     flex: 1 1;
     font-size: larger;
     padding: 1rem;
-    /* display: flex; */
     flex-direction: column;
 }
 
@@ -185,13 +174,11 @@ main .beranda .content-image {
     flex: 1;
     flex-wrap: wrap;
     display: flex;
-    /* width: 800px; */
     padding: 2rem;
 }
 
 main .beranda .content-image img {
     margin: auto;
-    /* min-width: 200px; */
     width: 100%;
 }
 
@@ -200,7 +187,6 @@ main .beranda .content-image img {
     background-color: #F17D33;
     min-height: 1000px;
     display: flex;
-    /* flex-direction: column; */
 }
 
 .about .container .judul {
@@ -210,8 +196,6 @@ main .beranda .content-image img {
 .about .gambar {
     flex: 1;
     min-width: 150px;
-    /* max-width: 500px; */
-    /* max-height: 900px; */
     align-items: center;
     text-align: center;
 }
@@ -231,19 +215,10 @@ main .beranda .content-image img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* min-width: 200px; */
-}
-
-.about .container .isi {
-    /* margin-block: .5rem; */
 }
 
 .about .container .isi h2 {
     padding: 0;
-}
-
-.about .container .judul {
-    /* font-size: 3rem; */
 }
 
 /* layanan */
@@ -253,16 +228,13 @@ main .layanan {
     background-color: #2D2D2D;
     width: 100%;
     padding: 2rem 0;
-    /* height: 1000px; */
     align-items: center;
     flex-direction: column;
-    /* margin: 0; */
     display: flex;
 }
 
 main .layanan .judul-layanan {
     color: white;
-    /* font-size: 3rem; */
     padding: 2rem;
 }
 
@@ -273,7 +245,6 @@ main .fitur {
     align-items: center;
     flex-wrap: wrap;
     display: flex;
-    /* padding: 5rem 0; */
 }
 
 .fitur .judul {
@@ -283,7 +254,6 @@ main .fitur {
 .card {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* border: 3px solid #2D2D2D; */
     border-radius: 10px;
     width: 400px;
     min-height: 500px;
@@ -293,11 +263,9 @@ main .fitur {
     margin: 30px;
     flex-direction: column;
     overflow: hidden;
-    /* padding: 1rem; */
 }
 
 main .fitur img {
-    /* border-color: #2D2D2D; */
     width: 300px;
     height: 300px;
     padding: 10px;
@@ -319,8 +287,6 @@ main .fitur p {
     justify-content: center;
     margin: auto;
     background-color: #F17D33;
-    /* min-width: 300px; */
-    /* min-height: 900px; */
 }
 
 .contact h2 {
@@ -334,7 +300,6 @@ main .fitur p {
 .contact form {
     display: flex;
     flex-direction: column;
-    /* min-height: 600px; */
     max-width: 800px;
     width: 100%;
     padding: 0 3rem 5rem;
@@ -391,8 +356,6 @@ label {
 
 
 aside {
-    /* flex: 1; */
-    /* display: flex; */
     width: 100%;
 }
 
@@ -457,7 +420,25 @@ footer {
     }
 
     header.navbar-container .nav-list ul {
-        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        align-items: center;
+        top: 40px;
+        height: 180px;
+        flex-direction: column;
+        background-color: #2D2D2D;
+        transform: translateY(-150%);
+        transition: all 1s;
+    }
+
+    header.navbar-container .nav-list ul.slide{
+        display: flex;
+        transform: translateX(0);
+    }
+
+    header.navbar-container .nav-list .logo {
+        z-index: 999;
     }
 
     header.navbar-container .nav-list .logo img {
@@ -466,7 +447,6 @@ footer {
 
     main .beranda {
         height: 700px;
-        /* flex-direction: column; */
         padding: 6rem;
     }
 
@@ -488,7 +468,7 @@ footer {
     }
 
     .card {
-        width: 80%;
+        width: 300px;
         min-height: 90%;
     }
 }
@@ -498,10 +478,6 @@ footer {
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
-    }
-
-    header.navbar-container .nav-list ul {
-        display: none;
     }
 
     main .beranda {
@@ -520,5 +496,21 @@ footer {
 
     .about .container {
         padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 65%;
+    }
+    header.navbar-container .nav-list ul {
+        top: 40px;
+        height: 150px;
+    }
+    .about{
+        min-height: 400px;
+    }
+    .about .gambar {
+        display: none;
     }
 }
